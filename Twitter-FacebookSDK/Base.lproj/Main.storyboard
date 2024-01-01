@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ALV-CU-Gug">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pretty Woman-->
+        <scene sceneID="kFJ-7M-Ro0">
+            <objects>
+                <tableViewController id="WxI-fF-vl9" customClass="FeedTableViewController" customModule="Twitter_FacebookSDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="97L-c2-Ivh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="0jO-MG-6JO" customClass="FeedTableViewCell" customModule="Twitter_FacebookSDK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="377.66665649414062"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0jO-MG-6JO" id="0J4-AF-kGm">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="377.66665649414062"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CLo-3m-Idt">
+                                            <rect key="frame" x="20" y="11" width="353" height="355.66666666666669"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="28J-lp-wcJ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="300"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="Kn0-st-rCt"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fhF-bs-E9f">
+                                                    <rect key="frame" x="0.0" y="305.33333333333331" width="353" height="50.333333333333314"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAn-0d-U0G">
+                                                            <rect key="frame" x="20" y="7.9999999999999982" width="35" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iem-XA-RHd">
+                                                            <rect key="frame" x="284.66666666666669" y="8" width="48.333333333333314" height="34.333333333333336"/>
+                                                            <color key="tintColor" systemColor="labelColor"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
+                                                            <connections>
+                                                                <action selector="share:" destination="WxI-fF-vl9" eventType="touchUpInside" id="6x3-ja-9x8"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="20" bottom="8" trailing="20"/>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="CLo-3m-Idt" secondAttribute="trailing" id="B4d-nh-NCI"/>
+                                        <constraint firstItem="CLo-3m-Idt" firstAttribute="bottom" secondItem="0J4-AF-kGm" secondAttribute="bottomMargin" id="IWP-t9-Dv9"/>
+                                        <constraint firstItem="CLo-3m-Idt" firstAttribute="leading" secondItem="0J4-AF-kGm" secondAttribute="leadingMargin" id="VVY-q0-z8B"/>
+                                        <constraint firstItem="CLo-3m-Idt" firstAttribute="top" secondItem="0J4-AF-kGm" secondAttribute="topMargin" id="vZ2-3B-Jlk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="girlImageView" destination="28J-lp-wcJ" id="8h6-fV-gvX"/>
+                                    <outlet property="nameLabel" destination="xAn-0d-U0G" id="A19-sq-pfj"/>
+                                    <outlet property="shareButton" destination="iem-XA-RHd" id="o84-Di-qq7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WxI-fF-vl9" id="7s9-Ct-afE"/>
+                            <outlet property="delegate" destination="WxI-fF-vl9" id="pRR-vL-A3c"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pretty Woman" id="zFg-yw-KwI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="foZ-1t-g5m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208" y="25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n2X-jB-CC1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ALV-CU-Gug" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Wj-G0-Sax">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WxI-fF-vl9" kind="relationship" relationship="rootViewController" id="Z2X-q8-gSL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWN-cd-9m1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-529" y="25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
